@@ -69,6 +69,7 @@ module.exports = (robot) ->
         lang = res.match[1].trim()
         return res.reply "#{lang} is not a valid ISO-639-1 language" unless iso6391.validate(lang)
         robot.brain.set("wikipedia:lang", lang)
+        setLanguage(lang)
         res.send "Language set at \"#{iso6391.getName(lang)}\""
         return
 
@@ -84,3 +85,7 @@ module.exports = (robot) ->
                     return robot.logger.error err
 
                 handler JSON.parse(body)
+
+    setLanguage = (lang) ->
+        WIKI_API_URL = "https://#{lang}.wikipedia.org/w/api.php"
+        WIKI_EN_URL = "https://#{lang}.wikipedia.org/wiki"
