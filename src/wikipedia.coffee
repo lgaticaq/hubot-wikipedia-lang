@@ -68,7 +68,7 @@ module.exports = (robot) ->
     robot.respond /wiki language (\w{2})/i, id: "wikipedia.language", (res) ->
         lang = res.match[1].trim()
         return res.reply "#{lang} is not a valid ISO-639-1 language" unless iso6391.validate(lang)
-        rebot.brain.set("wikipedia:lang", lang)
+        robot.brain.set("wikipedia:lang", lang)
         res.send "Language set at \"#{iso6391.getName(lang)}\""
         return
 
