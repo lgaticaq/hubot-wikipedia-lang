@@ -2,7 +2,7 @@
   "name": "hubot-wikipedia",
   "description": "A Hubot script for interacting with Wikipedia's API (searching for articles and returning extracts).",
   "version": "0.0.4",
-  "author": "Ian Lai <os@fyianlai.com>",
+  "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
   "license": "MIT",
   "keywords": [
     "hubot",
@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ClaudeBot/hubot-wikipedia.git"
+    "url": "https://github.com/lgaticaq/hubot-wikipedia.git"
   },
   "bugs": {
-    "url": "https://github.com/ClaudeBot/hubot-wikipedia/issues"
+    "url": "https://github.com/lgaticaq/hubot-wikipedia/issues"
   },
   "dependencies": {
     "iso-639-1": "^1.0.0"

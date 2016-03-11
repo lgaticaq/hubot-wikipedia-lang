@@ -13,7 +13,7 @@
 #   hubot wiki language <language> - Set <language> as language for search
 #
 # Author:
-#   MrSaints
+#   lgaticaq
 
 iso6391 = require "iso-639-1"
 

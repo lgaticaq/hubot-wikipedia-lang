@@ -1,7 +1,8 @@
 # hubot-wikipedia
 
-[![Build Status](https://travis-ci.org/ClaudeBot/hubot-wikipedia.svg)](https://travis-ci.org/ClaudeBot/hubot-wikipedia)
-[![devDependency Status](https://david-dm.org/ClaudeBot/hubot-wikipedia/dev-status.svg)](https://david-dm.org/ClaudeBot/hubot-wikipedia#info=devDependencies)
+[![Build Status](https://travis-ci.org/lgaticaq/hubot-wikipedia.svg)](https://travis-ci.org/lgaticaq/hubot-wikipedia)
+[![dependency Status](https://img.shields.io/david/lgaticaq/hubot-wikipedia.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-wikipedia#info=dependencies)
+[![devDependency Status](https://david-dm.org/lgaticaq/hubot-wikipedia/dev-status.svg)](https://david-dm.org/lgaticaq/hubot-wikipedia#info=devDependencies)
 
 A Hubot script for interacting with [Wikipedia's API](https://en.wikipedia.org/w/api.php) (searching for articles and returning extracts).
 
