@@ -1,8 +1,8 @@
-# hubot-wikipedia
+# hubot-wikipedia-lang
 
-[![Build Status](https://travis-ci.org/lgaticaq/hubot-wikipedia.svg)](https://travis-ci.org/lgaticaq/hubot-wikipedia)
-[![dependency Status](https://img.shields.io/david/lgaticaq/hubot-wikipedia.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-wikipedia#info=dependencies)
-[![devDependency Status](https://david-dm.org/lgaticaq/hubot-wikipedia/dev-status.svg)](https://david-dm.org/lgaticaq/hubot-wikipedia#info=devDependencies)
+[![Build Status](https://travis-ci.org/lgaticaq/hubot-wikipedia-lang.svg)](https://travis-ci.org/lgaticaq/hubot-wikipedia-lang)
+[![dependency Status](https://img.shields.io/david/lgaticaq/hubot-wikipedia-lang.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-wikipedia-lang#info=dependencies)
+[![devDependency Status](https://david-dm.org/lgaticaq/hubot-wikipedia-lang/dev-status.svg)](https://david-dm.org/lgaticaq/hubot-wikipedia-lang#info=devDependencies)
 
 A Hubot script for interacting with [Wikipedia's API](https://en.wikipedia.org/w/api.php) (searching for articles and returning extracts).
 
@@ -11,17 +11,17 @@ See [`src/wikipedia.coffee`](src/wikipedia.coffee) for full documentation.
 
 ## Installation via NPM
 
-1. Install the __hubot-wikipedia__ module as a Hubot dependency by running:
+1. Install the __hubot-wikipedia-lang__ module as a Hubot dependency by running:
 
     ```
-    npm install --save hubot-wikipedia
+    npm install --save hubot-wikipedia-lang
     ```
 
-2. Enable the module by adding the __hubot-wikipedia__ entry to your `external-scripts.json` file:
+2. Enable the module by adding the __hubot-wikipedia-lang__ entry to your `external-scripts.json` file:
 
     ```json
     [
-        "hubot-wikipedia"
+        "hubot-wikipedia-lang"
     ]
     ```
 
