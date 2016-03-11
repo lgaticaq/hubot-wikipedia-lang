@@ -2,22 +2,27 @@
 #   Wikipedia Public API
 #
 # Dependencies:
-#   None
+#   "iso-639-1": "^1.0.0"
 #
 # Configuration:
-#   None
+#   HUBOT_WIKIPEDIA_LANG
 #
 # Commands:
 #   hubot wiki search <query> - Returns the first 5 Wikipedia articles matching the search <query>
 #   hubot wiki summary <article> - Returns a one-line description about <article>
+#   hubot wiki language <language> - Set <language> as language for search
 #
 # Author:
 #   MrSaints
 
-WIKI_API_URL = "https://en.wikipedia.org/w/api.php"
-WIKI_EN_URL = "https://en.wikipedia.org/wiki"
+iso6391 = require "iso-639-1"
 
 module.exports = (robot) ->
+    LANG = robot.brain.get("wikipedia:lang") or process.env.HUBOT_WIKIPEDIA_LANG or "en"
+    LANG = if iso6391.validate(LANG) then LANG else "en"
+    WIKI_API_URL = "https://#{LANG}.wikipedia.org/w/api.php"
+    WIKI_EN_URL = "https://#{LANG}.wikipedia.org/wiki"
+
     robot.respond /wiki search (.+)/i, id: "wikipedia.search", (res) ->
         search = res.match[1].trim()
         params =
@@ -60,15 +65,22 @@ module.exports = (robot) ->
                 res.reply "Original article: #{createURL(article.title)}"
                 return
 
-createURL = (title) ->
-    "#{WIKI_EN_URL}/#{encodeURIComponent(title)}"
+    robot.respond /wiki language (\w{2})/i, id: "wikipedia.language", (res) ->
+        lang = res.match[1].trim()
+        return res.reply "#{lang} is not a valid ISO-639-1 language" unless iso6391.validate(lang)
+        rebot.brain.set("wikipedia:lang", lang)
+        res.send "Language set at \"#{iso6391.getName(lang)}\""
+        return
 
-wikiRequest = (res, params = {}, handler) ->
-    res.http(WIKI_API_URL)
-        .query(params)
-        .get() (err, httpRes, body) ->
-            if err
-                res.reply "An error occurred while attempting to process your request: #{err}"
-                return robot.logger.error err
+    createURL = (title) ->
+        "#{WIKI_EN_URL}/#{encodeURIComponent(title)}"
 
-            handler JSON.parse(body)
+    wikiRequest = (res, params = {}, handler) ->
+        res.http(WIKI_API_URL)
+            .query(params)
+            .get() (err, httpRes, body) ->
+                if err
+                    res.reply "An error occurred while attempting to process your request: #{err}"
+                    return robot.logger.error err
+
+                handler JSON.parse(body)

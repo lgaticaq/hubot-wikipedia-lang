@@ -33,6 +33,7 @@ Command | Listener ID | Description
 --- | --- | ---
 hubot wiki search `query` | `wikipedia.search` | Returns the first 5 Wikipedia articles matching the search `query`
 hubot wiki summary `article` | `wikipedia.summary` | Returns a one-line description about `article`
+hubot wiki language `language` | `wikipedia.language` | Set `language` as language for search
 
 
 ## Sample Interaction
