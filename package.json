@@ -1,7 +1,7 @@
 {
   "name": "hubot-wikipedia-lang",
   "description": "A Hubot script for interacting with Wikipedia's API (searching for articles and returning extracts).",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
   "license": "MIT",
   "keywords": [
