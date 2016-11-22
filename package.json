@@ -1,6 +1,6 @@
 {
   "name": "hubot-wikipedia-lang",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A Hubot script for search articles in Wikipedia",
   "main": "src",
   "scripts": {
