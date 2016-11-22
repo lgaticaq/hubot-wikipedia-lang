@@ -1,45 +1,50 @@
 {
   "name": "hubot-wikipedia-lang",
-  "description": "A Hubot script for interacting with Wikipedia's API (searching for articles and returning extracts).",
   "version": "0.1.2",
-  "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
-  "license": "MIT",
-  "keywords": [
-    "hubot",
-    "hubot-scripts",
-    "wikipedia",
-    "article",
-    "summary"
-  ],
+  "description": "A Hubot script for search articles in Wikipedia",
+  "main": "src",
+  "scripts": {
+    "pretest": "coffeelint src test",
+    "test": "mocha --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul",
+    "posttest": "istanbul report text-summary lcov",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "codeclimate": "codeclimate-test-reporter < coverage/lcov.info",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags && npm publish",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags && npm publish"
+  },
+  "engines": {
+    "node": ">=4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lgaticaq/hubot-wikipedia-lang.git"
   },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "wikipedia"
+  ],
+  "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lgaticaq/hubot-wikipedia-lang/issues"
   },
+  "homepage": "https://github.com/lgaticaq/hubot-wikipedia-lang#readme",
   "dependencies": {
-    "iso-639-1": "^1.0.0"
-  },
-  "peerDependencies": {
-    "hubot": "2.x"
+    "iso-639-1": "^1.2.3"
   },
   "devDependencies": {
-    "chai": "^3.0.0",
-    "coffee-script": "^1.9.3",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-mocha-test": "~0.13.0",
-    "grunt-release": "~0.14.0",
-    "hubot": "2.x",
-    "matchdep": "~1.0.0",
-    "mocha": "^3.0.0",
-    "sinon": "^1.13.0",
-    "sinon-chai": "^2.7.0"
-  },
-  "main": "index.coffee",
-  "scripts": {
-    "test": "grunt test"
+    "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.4.0",
+    "coffee-coverage": "^1.0.1",
+    "coffee-script": "^1.11.1",
+    "coffeelint": "^1.16.0",
+    "coveralls": "^2.11.15",
+    "generate-changelog": "^1.0.2",
+    "hubot-test-helper": "^1.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "nock": "^9.0.2"
   }
 }
