@@ -1,46 +1,32 @@
 # hubot-wikipedia-lang
 
-[![Build Status](https://travis-ci.org/lgaticaq/hubot-wikipedia-lang.svg)](https://travis-ci.org/lgaticaq/hubot-wikipedia-lang)
+[![npm version](https://img.shields.io/npm/v/hubot-wikipedia-lang.svg?style=flat-square)](https://www.npmjs.com/package/hubot-wikipedia-lang)
+[![npm downloads](https://img.shields.io/npm/dm/hubot-wikipedia-lang.svg?style=flat-square)](https://www.npmjs.com/package/hubot-wikipedia-lang)
+[![Build Status](https://img.shields.io/travis/lgaticaq/hubot-wikipedia-lang.svg?style=flat-square)](https://travis-ci.org/lgaticaq/hubot-wikipedia-lang)
+[![Coverage Status](https://img.shields.io/coveralls/lgaticaq/hubot-wikipedia-lang/master.svg?style=flat-square)](https://coveralls.io/github/lgaticaq/hubot-wikipedia-lang?branch=master)
+[![Code Climate](https://img.shields.io/codeclimate/github/lgaticaq/hubot-wikipedia-lang.svg?style=flat-square)](https://codeclimate.com/github/lgaticaq/hubot-wikipedia-lang)
 [![dependency Status](https://img.shields.io/david/lgaticaq/hubot-wikipedia-lang.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-wikipedia-lang#info=dependencies)
-[![devDependency Status](https://david-dm.org/lgaticaq/hubot-wikipedia-lang/dev-status.svg)](https://david-dm.org/lgaticaq/hubot-wikipedia-lang#info=devDependencies)
+[![devDependency Status](https://img.shields.io/david/dev/lgaticaq/hubot-wikipedia-lang.svg?style=flat-square)](https://david-dm.org/lgaticaq/hubot-wikipedia-lang#info=devDependencies)
 
-A Hubot script for interacting with [Wikipedia's API](https://en.wikipedia.org/w/api.php) (searching for articles and returning extracts).
+> A Hubot script for search articles in Wikipedia
 
-See [`src/wikipedia.coffee`](src/wikipedia.coffee) for full documentation.
+## Install
 
-
-## Installation via NPM
-
-1. Install the __hubot-wikipedia-lang__ module as a Hubot dependency by running:
-
-    ```
-    npm install --save hubot-wikipedia-lang
-    ```
-
-2. Enable the module by adding the __hubot-wikipedia-lang__ entry to your `external-scripts.json` file:
-
-    ```json
-    [
-        "hubot-wikipedia-lang"
-    ]
-    ```
-
-3. Run your bot and see below for available config / commands
-
-
-## Commands
-
-Command | Listener ID | Description
---- | --- | ---
-hubot wiki search `query` | `wikipedia.search` | Returns the first 5 Wikipedia articles matching the search `query`
-hubot wiki summary `article` | `wikipedia.summary` | Returns a one-line description about `article`
-hubot wiki language `language` | `wikipedia.language` | Set `language` as language for search
-
-
-## Sample Interaction
-
+```bash
+npm i -S hubot-wikipedia-lang
 ```
-user1>> hubot wiki summary clean room design
-hubot>> Clean room design: Clean room design (also known as the Chinese wall technique) is the method of copying a design by reverse engineering and then recreating it without infringing any of the copyrights and trade secrets associated with the original design. Clean room design is useful as a defense against copyright and trade secret infringement because it relies on independent invention.
-hubot>> Original article: https://en.wikipedia.org/wiki/Clean%20room%20design
-```
+
+Add `["hubot-wikipedia-lang"]` in `external-scripts.json`.
+
+Set optional `HUBOT_WIKIPEDIA_LANG` (default en) in environment variable to change default language.
+
+## Example
+`hubot wiki search <query>` -> `Get the first 5 articles`
+
+`hubot wiki summary <article>` -> `Get a one-line description`
+
+`hubot wiki language <language>` -> `Set a language for search`
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
