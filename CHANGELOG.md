@@ -1,3 +1,28 @@
+## 1.0.0 (2016-11-22)
+
+##### Chores
+
+* **nvm:** Add nvmrc ([cb8e9eeb](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/cb8e9eebd25e2e9e21c4603c93d81326187a246e))
+* **settings:**
+  * Add editorconfig ([687dbb4b](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/687dbb4b0f243b14c6fb2f01cf0f7fd339ff377e))
+  * Update ignores ([addbeeb7](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/addbeeb7b86d7417944d3e06aa98e405dfa2d78a))
+* **package:**
+  * Update dependencies ([d59a9ce3](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/d59a9ce349436dc4c1cc01ff96543f55f8ae829c))
+  * update grunt-mocha-test to version 0.13.0 ([9a5317ae](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/9a5317aea1efde72b774338bbf5894d73ca17cce))
+  * update mocha to version 3.0.0 ([c3cc5a83](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/c3cc5a839b7e04497d4174a9ac22674b863c78ab))
+  * update grunt-release to version 0.14.0 ([fc306ca4](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/fc306ca429d6959258f0e00e3893d453dacd1dc5))
+  * update dependencies ([90b357fc](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/90b357fc5139590b8e871cbf3c376ce8b2797702))
+* **scripts:** Remove unused files ([9bc61341](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/9bc61341990e91d95a1fd36f56de1982154ebc9d))
+* **travis:** Add coveralls and codeclimate. Update node versions ([c63e0320](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/c63e03209cb8eb74b068ba1824f67c6228110dc6))
+
+##### Documentation Changes
+
+* **all:** Update docs ([596603e2](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/596603e26ec6b54c7cb6c62f5f44ac0cccf3b3cd))
+
+##### New Features
+
+* **scripts:** Send messages with api to unfurl_links. Add all tests ([6c68682b](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/6c68682b3fde0ea10e53c1f80a9163f0a4c6bcfd))
+
 #### 0.1.2 (2016-03-11)
 
 * Fix set lang ([9f421c0](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/9f421c0))
