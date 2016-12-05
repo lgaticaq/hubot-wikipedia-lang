@@ -2,7 +2,7 @@
 #   Wikipedia Public API
 #
 # Dependencies:
-#   "iso-639-1": "^1.2.3"
+#   "iso-639-1": "^1.2.4"
 #
 # Configuration:
 #   HUBOT_WIKIPEDIA_LANG
@@ -15,7 +15,7 @@
 # Author:
 #   lgaticaq
 
-iso6391 = require("iso-639-1").default
+iso6391 = require("iso-639-1")
 
 module.exports = (robot) ->
   options = {unfurl_links: false, as_user: true}

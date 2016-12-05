@@ -32,19 +32,19 @@
   },
   "homepage": "https://github.com/lgaticaq/hubot-wikipedia-lang#readme",
   "dependencies": {
-    "iso-639-1": "^1.2.3"
+    "iso-639-1": "^1.2.4"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.4.0",
     "coffee-coverage": "^1.0.1",
-    "coffee-script": "^1.11.1",
+    "coffee-script": "^1.12.0",
     "coffeelint": "^1.16.0",
     "coveralls": "^2.11.15",
     "generate-changelog": "^1.0.2",
     "hubot-test-helper": "^1.5.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.1.2",
+    "mocha": "^3.2.0",
     "nock": "^9.0.2"
   }
 }
