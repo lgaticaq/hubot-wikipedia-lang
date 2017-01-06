@@ -1,3 +1,9 @@
+#### 1.0.2 (2017-1-6)
+
+##### Chores
+
+* **package:** Update dependencies ([c5358c9d](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/c5358c9de910fdcf683a510103a01d8e522f66bc))
+
 #### 1.0.1 (2016-12-5)
 
 ##### Chores
