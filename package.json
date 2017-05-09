@@ -36,15 +36,15 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.4.0",
+    "codeclimate-test-reporter": "^0.4.1",
     "coffee-coverage": "^2.0.0",
-    "coffee-script": "^1.12.2",
+    "coffee-script": "^1.12.5",
     "coffeelint": "^1.16.0",
-    "coveralls": "^2.11.15",
+    "coveralls": "^2.13.1",
     "generate-changelog": "^1.1.0",
-    "hubot-test-helper": "^1.5.0",
+    "hubot-test-helper": "^1.5.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "nock": "^9.0.2"
+    "mocha": "^3.3.0",
+    "nock": "^9.0.13"
   }
 }
