@@ -31,9 +31,12 @@ module.exports = (robot) ->
       if data[1].length is 0
         res.reply "No articles were found using search query: *#{search}*"
         return
-      message = data[1].map((x) -> "<#{createURL(x)}|#{x}>").join("\n")
-      robot.adapter.client.web.chat.postMessage(
-        res.message.room, message, options)
+      if robot.adapter.constructor.name in ["SlackBot", "Room"]
+        message = data[1].map((x) -> "<#{createURL(x)}|#{x}>").join("\n")
+        robot.adapter.client.web.chat.postMessage(
+          res.message.room, message, options)
+      else
+        res.send(data[1].map((x) -> "#{x}: #{createURL(x)}").join("\n"))
     .catch (err) ->
       robot.emit("error", err)
       res.reply("an error occurred. #{err.message}")
@@ -57,9 +60,14 @@ module.exports = (robot) ->
           summary = "No summary available"
         else
           url = "<#{createURL(article.title)}|Original article>"
+          url2 = "Original article: #{createURL(article.title)}"
           summary = ">#{article.extract.split('. ')[0..1].join('. ')}\n#{url}"
-        robot.adapter.client.web.chat.postMessage(
-          res.message.room, summary, options)
+          text = ">#{article.extract.split('. ')[0..1].join('. ')}\n#{url2}"
+        if robot.adapter.constructor.name in ["SlackBot", "Room"]
+          robot.adapter.client.web.chat.postMessage(
+            res.message.room, summary, options)
+        else
+          res.send(text)
         return
     .catch (err) ->
       robot.emit("error", err)
