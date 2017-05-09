@@ -1,3 +1,15 @@
+#### 1.0.3 (2017-5-9)
+
+##### Chores
+
+* **package:**
+  * Upgrade dependencies ([3d4255da](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/3d4255daf6352332c3a1b3907ce575a0fa7db2fd))
+  * update coffee-coverage to version 2.0.0 ([183d7e7e](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/183d7e7eccdcbf5e397e9f377e043ef8e96c0fb7))
+
+##### Bug Fixes
+
+* **script:** Add support to others app (no slack). Fix #8 ([ede339a4](https://github.com/lgaticaq/hubot-wikipedia-lang/commit/ede339a416829ee7597b7825c71149a0d9acd36e))
+
 #### 1.0.2 (2017-1-6)
 
 ##### Chores
