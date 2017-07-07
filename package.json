@@ -42,7 +42,7 @@
     "coffeelint": "^1.16.0",
     "coveralls": "^2.13.1",
     "generate-changelog": "^1.1.0",
-    "hubot-test-helper": "^1.5.1",
+    "hubot-test-helper": "^1.6.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
     "nock": "^9.0.13"
